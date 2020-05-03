@@ -84,12 +84,9 @@ a:hover {
 }
 
 .banner h1 {
-   font-size: 4rem;
+   font-size: 3rem;
    text-shadow: 0px -7px 0 #484747;
 
-   @include medium-screen {
-      font-size: 3rem;
-   }
 
    @include tab-screen {
       font-size: 2rem;
