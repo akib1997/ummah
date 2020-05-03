@@ -84,7 +84,21 @@
             <div class="col-md-6">
                <div class="video">
                   <h2 class="text-uppercase"><b>who are we?</b></h2>
-                  <a href="#"><img src="./Images/PlayButton.png" alt="Play"></a>
+                  <a href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><img src="./Images/PlayButton.png"
+                        alt="Play"></a>
+                  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                     <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cCBkW8DVEX4"
+                                 frameborder="0"
+                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                 allowfullscreen></iframe>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
             <div class="col-md-6">
@@ -233,7 +247,7 @@
                   <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
                </ul>
             </div>
-            <div class="col-12 my-3 my-md-5">
+            <div class="col-10 mx-auto my-3 my-md-5">
                <img src="./Images/Networks.png" class="img-fluid w-100" alt="">
             </div>
          </div>
