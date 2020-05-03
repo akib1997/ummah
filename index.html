@@ -39,22 +39,43 @@
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link 1 </a>
+                        <a class="nav-link b-b" href="#">Link 1 </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link 2 </a>
+                        <a class="nav-link b-b" href="#">Link 2 </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link 3 </a>
+                        <a class="nav-link b-b" href="#">Link 3 </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link 4 </a>
+                        <a class="nav-link b-b" href="#">Link 4 </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="./Images/notification.png" alt=""> </a>
+                        <a class="nav-link" href="#"><img src="./Images/notification.png" alt="notification"> </a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="./Images/profile.png" alt=""> </a>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                           <img src="./Images/profile.png" alt="profile">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <a class="dropdown-item" href="#">Profile</a>
+                           <a class="dropdown-item" href="#">Login</a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                           <i class="fas fa-angle-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <a class="dropdown-item" href="#">Action</a>
+                           <a class="dropdown-item" href="#">Another action</a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
                      </li>
                   </ul>
                </div>
@@ -101,11 +122,12 @@
                   </div>
                </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 align-self-end">
                <div class="welcome-text text-center text-md-right">
-                  <img src="./Images/heading-tip.png" alt="Heading tip">
+                  <img src="./Images/heading-tip.png" class="d-block mx-auto" alt="Heading tip">
                   <h2 class="mb-3 mb-lg-5"><b>Welcome to BMW</b></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem aut dicta odio nam tenetur quisquam
+                  <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem aut dicta odio nam
+                     tenetur quisquam
                      officiis deserunt labore cupiditate fuga atque, repudiandae magni sequi minima in provident ullam
                      doloremque earum.</p>
                </div>
@@ -150,25 +172,25 @@
             </div>
 
             <div class="col-md-4">
-               <img src="./Images/mosque.png" alt="mosque">
+               <img src="./Images/Login.png" alt="Login">
                <h5>Review Project</h5>
                <p><span>2</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam rem </p>
             </div>
 
             <div class="col-md-4">
-               <img src="./Images/mosque.png" alt="mosque">
+               <img src="./Images/Pound.png" alt="Found">
                <h5>Review Project</h5>
                <p><span>3</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam rem </p>
             </div>
          </div>
          <div class="row justify-content-center mt-md-5 mt-3 dash-bg">
             <div class="col-md-4">
-               <img src="./Images/mosque.png" alt="mosque">
+               <img src="./Images/share.png" alt="share">
                <h5>Review Project</h5>
                <p><span>4</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam rem </p>
             </div>
             <div class="col-md-4">
-               <img src="./Images/mosque.png" alt="mosque">
+               <img src="./Images/reward.png" alt="reward">
                <h5>Review Project</h5>
                <p><span>5</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam rem </p>
             </div>
@@ -184,7 +206,7 @@
          <div class="row">
             <div class="col-12 text-center">
                <img src="./Images/heading-tip.png" alt="">
-               <h3 class="text-white mb-md-5 mb-3">Projects</h3>
+               <h3 class="text-white mb-md-5 mb-3">Current Projects</h3>
             </div>
          </div>
          <div class="row">
@@ -207,8 +229,8 @@
                </div>
             </div>
          </div>
-         <div class="row b-bottom m-md-0">
-            <div class="col-lg-8 col-md-6 b-right p-md-0">
+         <div class="row b-bottom mx-md-0">
+            <div class="col-lg-8 col-md-6 b-right p-0">
                <div class="progress-details">
                   <div class="d-flex">
                      <div class="mr-2 mr-md-4">
@@ -294,8 +316,8 @@
                   <div class="col-12 col-md-6">
                      <div class="logo">
                         <a href="#"><img src="./Images/Nav-Logo.png" alt="Logo"></a>
-                        <div></div>
-                        <div class="small"></div>
+                        <p class="mb-0"><b>Sit amet consectetur adipisicing.</b></p>
+                        <p><b>Sit amet consectetur.</b></p>
                      </div>
                   </div>
                   <div class="col-6 col-md-3">

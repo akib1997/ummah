@@ -1,7 +1,7 @@
 @import './mixin';
 
 body {
-   font-size: 18px;
+   font-size: 16px;
    color: black;
 }
 a:hover {
@@ -15,13 +15,18 @@ a:hover {
       padding: 15px 0;
    }
 }
-.header ul li a,
+
+.nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+   color: #fff;
+}
+
+.header ul li a.b-b,
 .footer ul li a {
    position: relative;
 }
 
 .footer ul li a::after,
-.header ul li a::after {
+.header ul li a.b-b::after {
    content: '';
    display: block;
    width: 0;
@@ -32,8 +37,9 @@ a:hover {
    position: absolute;
    bottom: 0;
 }
+
 .footer ul li a:hover::after,
-.header ul li a:hover::after {
+.header ul li a.b-b:hover::after {
    width: 100%;
 }
 
@@ -78,44 +84,34 @@ a:hover {
 }
 
 .banner h1 {
-   font-size: 5rem;
+   font-size: 4rem;
+   text-shadow: 0px -7px 0 #484747;
 
    @include medium-screen {
       font-size: 3rem;
    }
+
+   @include tab-screen {
+      font-size: 2rem;
+   }
 }
 
 .banner h3 {
-   font-size: 3rem;
-
-   @include medium-screen {
-      font-size: 2rem;
-   }
+   font-size: 2.5rem;
+   text-shadow: 2px -5px 0px #484747;
 
    @include tab-screen {
       font-size: 1.5rem;
    }
 }
 
-.banner p {
-   font-size: 1.5rem;
-
-   @include medium-screen {
-      font-size: 1rem;
-   }
-}
-
 .banner h6 {
    color: #de954c;
-   font-size: 2rem;
-
-   @include medium-screen {
-      font-size: 1.5rem;
-   }
+   font-size: 1.5rem;
 }
 
 .banner a {
-   background-color: #de954c;
+   background-color: #c72;
    color: #fff;
    text-transform: uppercase;
    border-radius: 5px;
@@ -123,6 +119,7 @@ a:hover {
    display: inline-block;
    font-weight: bold;
    margin: 20px 0 100px 0;
+   font-size: 14px;
 }
 
 .welcome {
@@ -132,9 +129,6 @@ a:hover {
    @include tab-screen {
       padding: 100px 0;
       background-image: unset;
-   }
-   @include mobile-screen {
-      padding: 50px 0;
    }
 }
 
@@ -181,6 +175,10 @@ a:hover {
 
    p {
       margin-bottom: 25px;
+
+      @include mobile-screen {
+         padding: 0 20px;
+      }
    }
 }
 
@@ -193,8 +191,8 @@ a:hover {
    position: absolute;
    width: 200%;
    top: 50%;
-   height: 5px;
-   background-color: #de954c;
+   height: 3px;
+   background-color: #c72;
    left: -15px;
    z-index: -9;
 
@@ -204,10 +202,15 @@ a:hover {
 }
 
 .welcome .all-figure .col {
-   background-color: #de954c;
-   margin: 0 10px;
+   background-color: #c72;
+   margin: 0 12px;
    text-align: right;
    color: #fff;
+   border-radius: 3px;
+
+   @include mobile-screen {
+      text-align: center;
+   }
 
 }
 .welcome .all-figure .bullet {
@@ -218,7 +221,7 @@ a:hover {
    content: '';
    top: 40%;
    position: absolute;
-   right: -22px;
+   right: -24px;
    width: 25px;
    z-index: -1;
    background-image: url("../Images/links.png");
@@ -247,30 +250,33 @@ a:hover {
       padding: 100px 0;
       background-image: unset;
    }
-   @include mobile-screen {
-      padding: 50px 0;
+
+   img {
+      padding-bottom: 15px;
+   }
+
+   h3 {
+      font-weight: 600;
+      font-size: 2rem;
+   }
+   h6 {
+      color: #868e96;
+      font-size: 1.2rem;
+   }
+   h5 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+   }
+
+   span {
+      font-size: 3rem;
+      color: black;
+      line-height: 0;
+      text-shadow: 2px -9px 0px #f1dfce;
    }
 }
 
-.how-works h3 {
-   font-weight: 600;
-   font-size: 2rem;
-}
-
-.how-works h6 {
-   color: #868e96;
-   font-size: 1.5rem;
-}
-
-.how-works h5 {
-   font-size: 20px;
-   font-weight: 600;
-}
-.how-works span {
-   font-size: 3rem;
-   color: black;
-   line-height: 0;
-}
 .how-works .dash-bg {
    background-image: url('../Images/dashedline-down.png');
    background-repeat: no-repeat;
@@ -297,11 +303,9 @@ a:hover {
 }
 
 .current-project h3 {
-   font-size: 3rem;
-   @include tab-screen {
-      font-size: 2rem;
-   }
+   font-size: 2rem;
 }
+
 .current-project .details {
    position: absolute;
    bottom: 0;
@@ -331,6 +335,10 @@ a:hover {
 .current-project .progress-area {
    background-color: #c4c4c4;
    height: 10px;
+
+   @include tab-screen {
+      margin: 0 -15px;
+   }
 }
 .current-project .progress-area .progress-bar {
    background-color: #ddd62b;
@@ -347,6 +355,10 @@ a:hover {
 }
 .b-right {
    border-right: 1px solid #d0d0d0;
+
+   @include tab-screen {
+      border: 0;
+   }
 }
 
 .current-project .progress-details h6 {
@@ -370,7 +382,7 @@ a:hover {
    display: inline-block;
 }
 .current-project  .details-btn {
-   border: 1px solid #de954c;
+   border: 1px solid #c72;
    margin-right: 10px;
    color: black;
 }
@@ -456,14 +468,14 @@ a:hover {
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   padding: 200px 0;
+   padding: 200px 0 230px;
 
    @include medium-screen {
-      padding: 150px 0;
+      padding: 150px 0 180px;
    }
 
    @include tab-screen {
-      padding: 100px 0;
+      padding: 100px 0 130px;
    }
 
    @include mobile-screen {
@@ -483,12 +495,12 @@ a:hover {
 
 
 .form {
-   margin-top: -100px;
+   margin-top: -170px;
    padding-bottom: 100px;
    text-align: center;
 
    @include tab-screen {
-      margin-top: -70px;
+      margin-top: -100px;
       padding-bottom: 70px;
    }
 
@@ -499,33 +511,33 @@ a:hover {
 
 
    form {
-      background-color: #de954c;
+      background-color: #c72;
       border-radius: 10px;
-      padding: 100px 30px;
+      padding: 80px 30px;
       margin-bottom: 100px;
 
       @include medium-screen {
-         padding: 70px 30px;
+         padding: 60px 30px;
          margin-bottom: 80px;
       }
 
       @include tab-screen {
-         padding: 50px 20px;
+         padding: 40px 20px;
          margin-bottom: 50px;
       }
 
       @include mobile-screen {
-         padding: 40px 10px;
+         padding: 30px 10px;
          margin-bottom: 30px;
       }
 
       img {
          margin: 0 auto;
-         padding-bottom: 100px;
+         padding-bottom: 70px;
          display: block;
 
          @include tab-screen {
-            padding-bottom: 50px;
+            padding-bottom: 30px;
          }
       }
 
@@ -538,7 +550,7 @@ a:hover {
       }
 
       input {
-         background-color: #de954c;
+         background-color: #c72;
          border: 1px solid #868e96;
 
          &:focus{
@@ -555,7 +567,7 @@ a:hover {
    }
 
    p {
-      font-size: 20px;
+      font-size: 18px;
    }
 
    h6 {
@@ -590,15 +602,6 @@ a:hover {
 
       img {
          margin-bottom: 30px;
-      }
-
-      div {
-         height: 10px;
-         background-color: #fff;
-         margin-bottom: 10px;
-      }
-      .small {
-         width: 80%;
       }
    }
 
@@ -642,11 +645,13 @@ a:hover {
       display: flex;
       padding: 5px 3px 5px 5px;
       background-color: #fff;
+      border-radius: 3px;
 
       input {
          border: 0;
          padding-left: 20px;
          width: 65%;
+         font-size: 14px;
 
          &:focus {
             outline: 0;
@@ -654,12 +659,14 @@ a:hover {
       }
 
       button {
-         background-color: #de954c;
+         background-color: #c72;
          border-radius: 3px;
          color: #fff;
          width: 35%;
          border: 0;
          padding: 5px;
+         font-size: 14px;
+         box-shadow: 0px 1px 4px #c72;
       }
    }
 }

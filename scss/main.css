@@ -1,5 +1,5 @@
 body {
-  font-size: 18px;
+  font-size: 16px;
   color: black;
 }
 
@@ -17,13 +17,17 @@ a:hover {
   }
 }
 
-.header ul li a,
+.nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: #fff;
+}
+
+.header ul li a.b-b,
 .footer ul li a {
   position: relative;
 }
 
 .footer ul li a::after,
-.header ul li a::after {
+.header ul li a.b-b::after {
   content: '';
   display: block;
   width: 0;
@@ -36,7 +40,7 @@ a:hover {
 }
 
 .footer ul li a:hover::after,
-.header ul li a:hover::after {
+.header ul li a.b-b:hover::after {
   width: 100%;
 }
 
@@ -79,7 +83,8 @@ a:hover {
 }
 
 .banner h1 {
-  font-size: 5rem;
+  font-size: 4rem;
+  text-shadow: 0px -7px 0 #484747;
 }
 
 @media (max-width: 1024px) {
@@ -88,14 +93,15 @@ a:hover {
   }
 }
 
-.banner h3 {
-  font-size: 3rem;
-}
-
-@media (max-width: 1024px) {
-  .banner h3 {
+@media (max-width: 768px) {
+  .banner h1 {
     font-size: 2rem;
   }
+}
+
+.banner h3 {
+  font-size: 2.5rem;
+  text-shadow: 2px -5px 0px #484747;
 }
 
 @media (max-width: 768px) {
@@ -104,29 +110,13 @@ a:hover {
   }
 }
 
-.banner p {
+.banner h6 {
+  color: #de954c;
   font-size: 1.5rem;
 }
 
-@media (max-width: 1024px) {
-  .banner p {
-    font-size: 1rem;
-  }
-}
-
-.banner h6 {
-  color: #de954c;
-  font-size: 2rem;
-}
-
-@media (max-width: 1024px) {
-  .banner h6 {
-    font-size: 1.5rem;
-  }
-}
-
 .banner a {
-  background-color: #de954c;
+  background-color: #c72;
   color: #fff;
   text-transform: uppercase;
   border-radius: 5px;
@@ -134,6 +124,7 @@ a:hover {
   display: inline-block;
   font-weight: bold;
   margin: 20px 0 100px 0;
+  font-size: 14px;
 }
 
 .welcome {
@@ -145,12 +136,6 @@ a:hover {
   .welcome {
     padding: 100px 0;
     background-image: unset;
-  }
-}
-
-@media (max-width: 576px) {
-  .welcome {
-    padding: 50px 0;
   }
 }
 
@@ -204,6 +189,12 @@ a:hover {
   margin-bottom: 25px;
 }
 
+@media (max-width: 576px) {
+  .welcome-text p {
+    padding: 0 20px;
+  }
+}
+
 .welcome .all-figure {
   position: relative;
 }
@@ -213,8 +204,8 @@ a:hover {
   position: absolute;
   width: 200%;
   top: 50%;
-  height: 5px;
-  background-color: #de954c;
+  height: 3px;
+  background-color: #c72;
   left: -15px;
   z-index: -9;
 }
@@ -226,10 +217,17 @@ a:hover {
 }
 
 .welcome .all-figure .col {
-  background-color: #de954c;
-  margin: 0 10px;
+  background-color: #c72;
+  margin: 0 12px;
   text-align: right;
   color: #fff;
+  border-radius: 3px;
+}
+
+@media (max-width: 576px) {
+  .welcome .all-figure .col {
+    text-align: center;
+  }
 }
 
 .welcome .all-figure .bullet {
@@ -240,7 +238,7 @@ a:hover {
   content: '';
   top: 40%;
   position: absolute;
-  right: -22px;
+  right: -24px;
   width: 25px;
   z-index: -1;
   background-image: url("../Images/links.png");
@@ -274,10 +272,8 @@ a:hover {
   }
 }
 
-@media (max-width: 576px) {
-  .how-works {
-    padding: 50px 0;
-  }
+.how-works img {
+  padding-bottom: 15px;
 }
 
 .how-works h3 {
@@ -287,18 +283,20 @@ a:hover {
 
 .how-works h6 {
   color: #868e96;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .how-works h5 {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .how-works span {
   font-size: 3rem;
   color: black;
   line-height: 0;
+  text-shadow: 2px -9px 0px #f1dfce;
 }
 
 .how-works .dash-bg {
@@ -334,13 +332,7 @@ a:hover {
 }
 
 .current-project h3 {
-  font-size: 3rem;
-}
-
-@media (max-width: 768px) {
-  .current-project h3 {
-    font-size: 2rem;
-  }
+  font-size: 2rem;
 }
 
 .current-project .details {
@@ -380,6 +372,12 @@ a:hover {
   height: 10px;
 }
 
+@media (max-width: 768px) {
+  .current-project .progress-area {
+    margin: 0 -15px;
+  }
+}
+
 .current-project .progress-area .progress-bar {
   background-color: #ddd62b;
   width: 30%;
@@ -397,6 +395,12 @@ a:hover {
 
 .b-right {
   border-right: 1px solid #d0d0d0;
+}
+
+@media (max-width: 768px) {
+  .b-right {
+    border: 0;
+  }
 }
 
 .current-project .progress-details h6 {
@@ -422,7 +426,7 @@ a:hover {
 }
 
 .current-project .details-btn {
-  border: 1px solid #de954c;
+  border: 1px solid #c72;
   margin-right: 10px;
   color: black;
 }
@@ -511,18 +515,18 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 200px 0;
+  padding: 200px 0 230px;
 }
 
 @media (max-width: 1024px) {
   .donate {
-    padding: 150px 0;
+    padding: 150px 0 180px;
   }
 }
 
 @media (max-width: 768px) {
   .donate {
-    padding: 100px 0;
+    padding: 100px 0 130px;
   }
 }
 
@@ -545,14 +549,14 @@ a:hover {
 }
 
 .form {
-  margin-top: -100px;
+  margin-top: -170px;
   padding-bottom: 100px;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .form {
-    margin-top: -70px;
+    margin-top: -100px;
     padding-bottom: 70px;
   }
 }
@@ -565,42 +569,42 @@ a:hover {
 }
 
 .form form {
-  background-color: #de954c;
+  background-color: #c72;
   border-radius: 10px;
-  padding: 100px 30px;
+  padding: 80px 30px;
   margin-bottom: 100px;
 }
 
 @media (max-width: 1024px) {
   .form form {
-    padding: 70px 30px;
+    padding: 60px 30px;
     margin-bottom: 80px;
   }
 }
 
 @media (max-width: 768px) {
   .form form {
-    padding: 50px 20px;
+    padding: 40px 20px;
     margin-bottom: 50px;
   }
 }
 
 @media (max-width: 576px) {
   .form form {
-    padding: 40px 10px;
+    padding: 30px 10px;
     margin-bottom: 30px;
   }
 }
 
 .form form img {
   margin: 0 auto;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
   display: block;
 }
 
 @media (max-width: 768px) {
   .form form img {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 
@@ -613,7 +617,7 @@ a:hover {
 }
 
 .form form input {
-  background-color: #de954c;
+  background-color: #c72;
   border: 1px solid #868e96;
 }
 
@@ -629,7 +633,7 @@ a:hover {
 }
 
 .form p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .form h6 {
@@ -667,16 +671,6 @@ a:hover {
 
 .footer .logo img {
   margin-bottom: 30px;
-}
-
-.footer .logo div {
-  height: 10px;
-  background-color: #fff;
-  margin-bottom: 10px;
-}
-
-.footer .logo .small {
-  width: 80%;
 }
 
 .footer h6 {
@@ -723,12 +717,14 @@ a:hover {
   display: flex;
   padding: 5px 3px 5px 5px;
   background-color: #fff;
+  border-radius: 3px;
 }
 
 .footer .subscribe input {
   border: 0;
   padding-left: 20px;
   width: 65%;
+  font-size: 14px;
 }
 
 .footer .subscribe input:focus {
@@ -736,11 +732,14 @@ a:hover {
 }
 
 .footer .subscribe button {
-  background-color: #de954c;
+  background-color: #c72;
   border-radius: 3px;
   color: #fff;
   width: 35%;
   border: 0;
   padding: 5px;
+  font-size: 14px;
+  -webkit-box-shadow: 0px 1px 4px #c72;
+          box-shadow: 0px 1px 4px #c72;
 }
 /*# sourceMappingURL=main.css.map */
