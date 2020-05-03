@@ -65,8 +65,7 @@
 
             <h1 class="text-uppercase"><b>Build my ummah</b></h1>
 
-            <h3 class="mb-md-5 my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, sint, animi sunt
-               quia sequi.</h3>
+            <h3 class="mb-md-5 my-3">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
 
             <p>“Whoever builds a masjid (mosque) in which the Name of Allah is
                mentioned, Allah will build a house for him in Paradise.”</p>
@@ -367,6 +366,27 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
+
+   <script>
+      document.onkeydown = function (e) {
+         if (e.keyCode == 123) {
+            return false;
+         }
+         if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+         }
+         if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+         }
+         if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+            return false;
+         }
+
+         if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+            return false;
+         }
+      }
+   </script>
 </body>
 
 </html>
