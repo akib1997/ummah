@@ -297,10 +297,30 @@ a:hover {
    @include mobile-screen {
       padding: 50px 0;
    }
+
+   .image {
+      
+      img {
+         @include tab-screen {
+            height: 300px;
+            object-fit: cover;
+         }
+
+         @include mobile-screen {
+            height: 250px;
+         }
+      }
+   }
 }
 
 .current-project h3 {
    font-size: 2rem;
+   margin-bottom: 3rem;
+
+   @include tab-screen {
+      margin-bottom: 5rem;
+   }
+
 }
 
 .current-project .details {
@@ -317,7 +337,7 @@ a:hover {
 
    @include tab-screen {
       max-width: 100%;
-      position: unset;
+      margin-left: 10px;
    }
 }
 
