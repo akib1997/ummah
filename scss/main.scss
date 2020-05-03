@@ -41,7 +41,6 @@ a:hover {
    background-image: url('../Images/MainBannerBg.png');
    background-size: cover;
    background-position: center;
-   height: 100vh;
 
    @include tab-screen {
       background-attachment: fixed;
